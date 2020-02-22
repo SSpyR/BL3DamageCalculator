@@ -14,7 +14,7 @@ cd {insert directory here}
 ```
 
 ```bash
-python3 main.py {skill tree link} {arguments}
+python main.py {skill tree link} {arguments}
 ```
 Then execute like seen above, currently the script accepts bl3skills and bl3zones links, official site links to come soon
 Arguments are numbers with spaces in between, values based on which Vault Hunter you are calcing for, specific info below
