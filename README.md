@@ -2,7 +2,9 @@
 This is a (currently) command line python script that allows you to calculate the damage of your build
 
 # How to Use
-Execute this script as you would any other python script, with some arguments
+Unpack the ZIP into whatever directory you please
+
+Execute this script as you would any other python script, with some arguments:
 
 Open up a command prompt window and make sure python is installed
 
