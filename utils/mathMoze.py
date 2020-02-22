@@ -10,13 +10,13 @@ Arguments for mod: [Click Click, Drowning in Brass, Desperate Measures, Phalanx 
 experimental_munitions = 0
 
 def skillsSpec(skills, mods, gear):
-    import calcMain
+    from utils import calcMain
     
     selfless_vengeance = skills[0]
     armored_infantry = skills[1]
     drowning_in_brass = skills[2]
     global experimental_munitions
-    experimental_munitions = eval(skills[3])*0.1
+    experimental_munitions = int(skills[3])*0.1
     desperate_measures = skills[4]
     phalanx_doctrine = skills[5]
     tenacious_defense = skills[6]
@@ -33,11 +33,11 @@ def skillsSpec(skills, mods, gear):
     v1=0 + gear[1]
     v2=0 + gear[2]
     splash=0  + gear[3]
-    elemental = 0.1 * eval(stoke_the_embers)  + gear[4]
-    critical = 0.04 * eval(scorching_rpms)  + gear[5] 
-    bonus_fire = (0.0225 * eval(cloud_of_lead)) + (0.03 * eval(selfless_vengeance)) + gear[6]
-    skag_den = 0.03 * eval(fire_in_the_skag_den)
-    iron_bear_damage = 0.04 * eval(stainless_steel_bear) + 0.05 * eval(scorching_rpms)
+    elemental = 0.1 * int(stoke_the_embers)  + gear[4]
+    critical = 0.04 * int(scorching_rpms)  + gear[5] 
+    bonus_fire = (0.0225 * int(cloud_of_lead)) + (0.03 * int(selfless_vengeance)) + gear[6]
+    skag_den = 0.03 * int(fire_in_the_skag_den)
+    iron_bear_damage = 0.04 * int(stainless_steel_bear) + 0.05 * int(scorching_rpms)
     
     mults = [normal, v1, v2, splash, elemental, critical, bonus_fire]
 
@@ -55,7 +55,7 @@ def skillsSpec(skills, mods, gear):
     body = body + body_1
     crit = crit + crit_1
 
-    if eval(short_fuse) != 0:
+    if (short_fuse) != 0:
         sf_str, body_1, crit_1 = calc_short_fuse(body, crit, mults, iron_bear_damage, skag_den)
         response = response + "\n" + sf_str
 

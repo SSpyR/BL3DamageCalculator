@@ -7,7 +7,7 @@ author @Prismatic
 """
 
 def skillsSpec(skills, mods, gear):
-    import calcMain
+    from utils import calcMain
 
     # Mystical Assault
     transcend = skills[0]

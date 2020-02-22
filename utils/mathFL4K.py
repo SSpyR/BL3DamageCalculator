@@ -8,7 +8,7 @@ Arguments for mod: [Big Game, Furious Attack Stacks, Interplanetary Stalker Stac
 
 
 def skillsSpec(skills, mods, gear):
-    import calcMain
+    from utils import calcMain
     # Stalker
     furious_attack = skills[0]
     turn_tail_and_run = skills[1]
@@ -31,7 +31,7 @@ def skillsSpec(skills, mods, gear):
     barbaric_yawp = skills[14]
     pack_tactics = skills[15]
 
-    mods[0] = mods[0] + eval(big_game)
+    mods[0] = mods[0] + int(big_game)
     if mods[3] == 1:
         mods[3]=0.50
     else:
@@ -47,7 +47,7 @@ def skillsSpec(skills, mods, gear):
     critical=((0.03*float(hunters_eye)*bg)+(0.04*float(ambush_predator))+(0.033*float(most_dangerous_game)*bg)+(0.15*float(galactic_shadow))) + gear[5]
     bonus_element=0 + gear[6]
 
-    mults[normal, v1, v2, splash, elemental, critical, bonus_element]
+    mults = [normal, v1, v2, splash, elemental, critical, bonus_element]
 
     response, body, crit = calcMain.calc_Damage(mults)
 

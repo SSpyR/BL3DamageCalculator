@@ -20,7 +20,7 @@ Then execute like seen above, currently the script accepts bl3skills and bl3zone
 Arguments are numbers with spaces in between, values based on which Vault Hunter you are calcing for, specific info below
 
 # Amara Arguments
-[Personal Space Strength(0-1), Samsara Stacks(0-3)]
+[Personal Space Strength(0-1), Samsara Stacks(0-3), 0, 0] <- Still Enter These Zeros at the End
 
 # FL4K Arguments
 [Big Game Bonus Points, Furious Attack Stacks(0-10), Interplanetary Stalker Stacks(0-3), Full Health or Not(0-1)]

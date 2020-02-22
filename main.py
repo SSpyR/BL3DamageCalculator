@@ -9,15 +9,15 @@ from sys import argv
 from utils import calcMain as calc
 
 def main():
-    args[]=argv
+    print(argv)
     mods=[]
     for i in range(2, 6):
-        mods.append(eval(args[i]))
+        mods.append(eval(argv[i]))
     gear=[]
-    for i in range(6, len(args)):
-        gear.append(eval(args[i]))
+    for i in range(6, len(argv)):
+        gear.append(eval(argv[i]))
     while len(gear)<7: gear.append(0)
-    response=BLCalc.unpack(args[1], mods, gear)
+    response=calc.unpack(argv[1], mods, gear)
     return response
 
 if __name__ == '__main__':

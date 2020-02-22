@@ -8,7 +8,7 @@ Arguments for mod: [Death Follows Close, Kill Skill Stacks, Active Action Skills
 
 
 def skillsSpec(skills, mods, gear):
-    import calcMain
+    from utils import calcMain
     # Doubled Agent
     synchronicity = skills[0]
     donnybrook = skills[1]
@@ -23,7 +23,7 @@ def skillsSpec(skills, mods, gear):
     # Under Cover
     confident_competence = skills[7]
 
-    mods[0] = mods[0] + eval(death_follows_close)
+    mods[0] = mods[0] + int(death_follows_close)
     normal_hit = [confident_competence, violent_momentum, synchronicity, donnybrook, double_barrel]
 
     normal = zane_normal_hit(normal_hit, mods) + gear[0]
@@ -32,7 +32,7 @@ def skillsSpec(skills, mods, gear):
     splash= 0 + gear[3]
     elemental = 0 + gear[4]
     critical = 0 + gear[5] 
-    bonus_cryo = (0.06 * eval(cold_bore)) + (0.12 * eval(trick_of_the_light)) + gear[6]
+    bonus_cryo = (0.06 * int(cold_bore)) + (0.12 * int(trick_of_the_light)) + gear[6]
     
     mults = [normal, v1, v2, splash, elemental, critical, bonus_cryo]
 

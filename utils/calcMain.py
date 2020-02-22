@@ -5,11 +5,11 @@
 # Implement Official Website Trees
 
 
-import urlDecrypt as url
-import mathMoze as Moze
-import mathZane as Zane
-import mathAmara as Amara
-import mathFL4K as FL4K
+from utils import urlDecrypt as url
+from utils import mathMoze as Moze
+from utils import mathZane as Zane
+from utils import mathAmara as Amara
+from utils import mathFL4K as FL4K
 
 
 
