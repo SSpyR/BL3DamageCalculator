@@ -4,7 +4,13 @@ This is a (currently) command line python script that allows you to calculate th
 # How to Use
 Execute this script as you would any other python script, with some arguments
 
+Open up a command prompt window and make sure python is installed
+
 Change directories to wherever you place this program
+```bash
+cd {insert directory here}
+```
+
 ```bash
 python3 main.py {skill tree link} {arguments}
 ```
